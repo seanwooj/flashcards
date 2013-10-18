@@ -4,5 +4,6 @@ Flashcards::Application.routes.draw do
   resources :users, :only => [:new, :create]
   resource :preferences, :only => [:show]
   resource :dashboard, :only => [:show]
+  resource :decks, :only => [:create]
 end
 

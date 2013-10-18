@@ -1,1 +1,12 @@
 dashboard
+
+my cards
+= form_for @deck do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.submit
+  
+.decks
+  - @decks.each do |deck|
+    = div_for deck do
+      = link_to deck.name, deck_path(deck)
