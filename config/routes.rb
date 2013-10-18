@@ -3,5 +3,6 @@ Flashcards::Application.routes.draw do
   resource :session, :only => [:new, :create, :destroy]
   resources :users, :only => [:new, :create]
   resource :preferences, :only => [:show]
+  resource :dashboard, :only => [:show]
 end
 
