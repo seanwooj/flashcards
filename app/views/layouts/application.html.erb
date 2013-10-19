@@ -9,6 +9,7 @@
 <body>
 
   <% if signed_in? %>
+    <%= link_to 'home', dashboard_path %>
     <%= link_to current_user.email, preferences_path %>
     <%= link_to 'sign out', session_path, :method => :delete %>
   <% else %>

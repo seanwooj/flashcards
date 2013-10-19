@@ -1,0 +1,18 @@
+Decks
+= div_for @deck do
+  %h2= @deck.name
+  = form_for [@deck, @card] do |f|
+    = f.label :front
+    = f.text_field :front
+    = f.label :back
+    = f.text_field :back
+    = f.submit "create card"
+  .cards
+    - @cards.each do |card|
+      = div_for card do
+        .front
+          = card.front
+        .back
+          = card.back
+        = link_to 'delete card', deck_card_path(@deck, card), :method => :delete
+

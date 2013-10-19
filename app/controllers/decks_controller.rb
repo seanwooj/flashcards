@@ -7,6 +7,12 @@ class DecksController < ApplicationController
 
     redirect_to dashboard_path 
   end
+
+  def show
+    @deck = Deck.find(params[:id])
+    @cards = @deck.cards
+    @card = @deck.cards.build
+  end
   
   private
 

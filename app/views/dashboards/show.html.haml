@@ -7,6 +7,7 @@ my cards
   = f.submit
   
 .decks
+  %h2 decks
   - @decks.each do |deck|
     = div_for deck do
-      = link_to deck.name, deck_path(deck)
+      = link_to deck.name, deck
