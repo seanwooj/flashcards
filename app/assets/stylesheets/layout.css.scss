@@ -1,0 +1,35 @@
+// table of contents
+// header styles
+// global styles
+
+// header styles
+.header {
+  background: #F1F1F1;
+  padding: 10px;
+  border-bottom: 1px solid #DDDDDD;
+  a {
+    color: #777;
+    text-decoration: none;
+    &:hover {
+      color: #333;
+    }
+  }
+}
+
+// global styles
+.right {
+  float: right !important;
+}
+
+.left {
+  float: left !important;
+}
+
+.cf:before, .cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}

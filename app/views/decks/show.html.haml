@@ -2,10 +2,8 @@ Decks
 = div_for @deck do
   %h2= @deck.name
   = form_for [@deck, @card] do |f|
-    = f.label :front
-    = f.text_field :front
-    = f.label :back
-    = f.text_field :back
+    = f.text_field :front, :placeholder => 'front of card'
+    = f.text_field :back, :placeholder => 'back of card'
     = f.submit "create card"
   .cards
     - @cards.each do |card|
