@@ -1,4 +1,9 @@
-Decks
+= content_for :javascripts do
+  = javascript_include_tag 'deck'
+  :javascript
+    $(function(){
+      fc.deck.init();
+    }); 
 = div_for @deck do
   %h2= @deck.name
   = form_for [@deck, @card] do |f|
@@ -13,4 +18,7 @@ Decks
         .back
           = card.back
         = link_to 'delete card', deck_card_path(@deck, card), :method => :delete
+  .card_navigation
+    = link_to 'prev', '#', :class => 'prev'
+    = link_to 'next', '#', :class => 'next'
 

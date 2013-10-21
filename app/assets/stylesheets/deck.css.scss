@@ -1,0 +1,29 @@
+.card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  display: none;
+  
+  &.current {
+    display: block;
+  }
+
+  &.frontside {
+    .front {
+      display: block;
+    }
+
+    .back {
+      display: none;
+    }
+  }
+
+  &.backside {
+    .front {
+      display: none;
+    }
+
+    .back {
+      display: block;
+    }
+  }
+}
