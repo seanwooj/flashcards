@@ -2,7 +2,7 @@
   = javascript_include_tag 'deck'
   :javascript
     $(function(){
-      fc.deck.init();
+      fc.deck.init(".cards");
     }); 
 = div_for @deck do
   %h2= @deck.name
